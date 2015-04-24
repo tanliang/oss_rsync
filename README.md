@@ -24,4 +24,4 @@ define('OSS_LOG_PRE', '');              // 设置记录时对应的前缀
 $local_path = 'D:\oss';                 // 本地 OSS 存储目录
 
 #环境
-windows7 + xampp 1.8.2(php 5.4.31)
+Windows7 + Xampp 1.8.2(php 5.4.31)
