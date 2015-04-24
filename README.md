@@ -4,7 +4,7 @@
 github 有本地同步至 OSS 的[项目](https://github.com/mehwww/oss-sync)，但实际我需要的是从 OSS 同步至本地，只能自己动手了。
 
 # 原理
-基本就是利用 OSS 的 logging 功能，检查里面的 PUT 相关的记录，并下载至本地即可，因为 OSS 每小时更新一次日志，使用计划任务，或者 crontab 执行
+基本就是先用 OSS 的客户端完整下载 bucket ，再用 OSS 的 logging 功能，检查里面的 PUT 相关的记录，并下载至本地。因为 OSS 每小时更新一次日志，使用计划任务，或者 crontab 执行即可。
 
 # 配置
 修改 conf.php
