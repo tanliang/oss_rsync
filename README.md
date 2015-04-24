@@ -15,7 +15,6 @@ define('OSS_ACCESS_KEY', '');
 
 define('OSS_HOST', 'oss.aliyuncs.com');
 
-
 define('OSS_UPLOAD_BUCKET', '');        // 需要同步内容的 bucket
 
 define('OSS_LOG_BUCKET', '');           // 记录同步日志的 bucket
@@ -23,3 +22,6 @@ define('OSS_LOG_BUCKET', '');           // 记录同步日志的 bucket
 define('OSS_LOG_PRE', '');              // 设置记录时对应的前缀
 
 $local_path = 'D:\oss';                 // 本地 OSS 存储目录
+
+#环境
+windows7 + xampp 1.8.2(php 5.4.31)
