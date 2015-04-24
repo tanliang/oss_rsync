@@ -3,11 +3,11 @@ define('OSS_ACCESS_ID', '');
 define('OSS_ACCESS_KEY', '');
 define('OSS_HOST', 'oss.aliyuncs.com');
 
-define('OSS_UPLOAD_BUCKET', '');
-define('OSS_LOG_BUCKET', '');
-define('OSS_LOG_PRE', '');
+define('OSS_UPLOAD_BUCKET', '');        // 需要同步内容的 bucket
+define('OSS_LOG_BUCKET', '');           // 记录同步日志的 bucket
+define('OSS_LOG_PRE', '');              // 设置记录时对应的前缀
 
-$local_path = 'D:\oss';
+$local_path = 'D:\oss';                 // 本地 OSS 存储目录
 
 /**
  * 根据 传入的参数生成多级目录
