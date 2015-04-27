@@ -32,7 +32,10 @@ foreach ($list as $k => $v) {
 		$dir = getMultDir($local_path, $dirname);
 		$file = $dir.$basename;
 		$data = $ossupload->get(ltrim($k2, '/'.OSS_UPLOAD_BUCKET.'/'));
-		createFile($file, $data);
+		if (createFile($file, $data)) {
+			file_put_contents('log/'.date('Ym').'.txt', $file.PHP_EOL, FILE_APPEND);
+		}
+		
 	}
 	$osslog->delete($k);
 }
