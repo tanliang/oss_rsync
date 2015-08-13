@@ -25,3 +25,6 @@ $local_path = 'D:\oss';                 // 本地 OSS 存储目录
 
 #环境
 Windows7 + Xampp 1.8.2(php 5.4.31)
+
+#参考
+[设置Windows任务计划,以“每小时”重复](http://blog.csdn.net/chentaocba/article/details/7745578)
