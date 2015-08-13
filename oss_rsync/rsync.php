@@ -9,11 +9,21 @@ $ossupload = TL_Oss::getInstance(OSS_UPLOAD_BUCKET);
 $osslog = TL_Oss::getInstance(OSS_LOG_BUCKET);
 
 $list = $osslog->getList();
+$time_start = time();
+$time_max = 3600;		// one hour
+
 foreach ($list as $k => $v) {
+	if ((time()-$time_start) >= $time_max) {
+		break;
+	}
 	
 	if (substr($k, 0, 7) != OSS_LOG_PRE) {
 		continue;
 	}
+	if (isset($argv[1]) && substr($k, -13, 2) % 2 != $argv[1]) {
+		continue;
+	}
+	
 	$item = $osslog->get($k);
 	$res = array();
 	foreach (explode("\n", $item) as $v2) {
